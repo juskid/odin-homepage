@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playpen+Sans:wght@100..800&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    font-family: "Playfair Display", Roboto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.background {
+    z-index: -1;
+    background-color: #0891B2;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    box-shadow: 2px 0px 9px grey;
+    transform: translate(-42%, 8%) rotate(-1deg)scale(2) skewY(-10deg);
+}
+
+
+
+.about-us-center {
+
+    display: flex;
+    margin: 5rem 15%;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.image-container {
+    flex-shrink: 0;
+    position: relative;
+    align-self: center;
+}
+
+
+.image-container img {
+    width: 28rem;
+}
+
+.about-us-center .name {
+
+    line-height: 1.2;
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px #000000;
+
+}
+
+
+.about-us-text {
+    background-color: white;
+    padding: 1.5rem 1.5rem;
+    align-self: center;
+    box-shadow: 2px 2px 6px 0px #80808073;
+    border-radius: 10px;
+}
+
+.about-us-text h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    padding-bottom: 1.5rem;
+    padding-top: .5rem;
+}
+
+.about-us-text p {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    color: rgb(99, 99, 99);
+    font-size: 1.5rem;
+}
+
+.about-us-socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    gap: 1.5rem;
+}
+
+.about-us-socials i {
+    font-size: 1.5rem;
+}
+
+i:hover {
+    transform: scale(1.5);
+    transition: transform 500ms ease;
+}
+
+
+
+
+/* work section */
+
+main {
+    width: 100%;
+    padding: 6rem 15%;
+}
+
+.my-work {
+    color: black;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 4rem;
+    grid-auto-flow: row;
+
+}
+
+
+.project {
+    border-radius: 25px;
+    box-shadow: 2px 2px 6px 0px #80808073;
+    transition: transform 250ms ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+
+}
+
+.project-icon {
+    height: 50%;
+}
+
+.project-icon img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.project-name-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-name-wrapper,
+.project-desc {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.project-desc {
+    padding-bottom: 2rem;
+    font-size: 1rem;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #323232;
+}
+
+.project-name-wrapper .project-name {
+    font-size: 1.5rem;
+}
+
+.repo-preview-icon svg,
+.repo-preview-icon i {
+
+    font-size: 2rem;
+    width: 32px;
+    /* Set the desired width */
+    height: 32px;
+    /* Set the desired height */
+}
+
+.repo-preview-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+
+    transform: scale(1.5);
+    transition: transform 500ms ease;
+
+}
+
+
+/* footer */
+footer {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 15%;
+    background-color: #0891B2;
+    color: white;
+}
+
+.telephone-number-wrapper,
+.mail-wrapper {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.telephone-number-wrapper svg,
+.mail-wrapper svg {
+    height: 30px;
+    width: fit-content;
+}
+
+.contact-me-heading {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    width: 50%;
+   height: 100%;
+    
+}
+
+.right {
+    width: 50%;
+
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.footer-social-icons {
+    display: flex;
+    font-size: 2rem;
+    gap: 15px;
+
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.2rem);
+}
+
+
+@media (min-width: 711px) and (max-width: 1100px) {
+
+    .about-us-center picture>img {
+        width: 22rem;
+    }
+
+
+
+    .about-us-center picture {
+        float: left;
+        margin: -4rem 1rem 1rem -3rem;
+    }
+
+    .about-us-center>div {
+        box-shadow: none;
+    }
+
+    .about-us-center {
+
+        margin: 12% 13%;
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .about-us-center .name {
+        top: 0;
+        left: 85%;
+        transform: none;
+    }
+
+    footer {
+        padding: 6rem 10%;
+    }
+
+}
+
+
+
+
+@media (max-width: 711px) {
+
+    .background {
+        transform: translate(-42%, 8%) rotate(-1deg)scale(2) skewY(-10deg);
+    }
+
+    .about-us-center {
+        flex-direction: column;
+        margin: 10% 10%;
+        margin-bottom: 0;
+        align-items: center;
+    }
+
+    .about-us-text {
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+        text-align: center;
+        color: black;
+
+    }
+
+    .about-us-text h2 {
+        font-weight: 600;
+    }
+
+    .about-us-text p {
+        font-size: 1.2rem;
+    }
+
+    .about-us-center .name {
+        font-size: 3rem;
+    }
+
+
+    .about-us-socials {
+
+        justify-content: center;
+        margin-right: 1rem;
+        gap: 1.5rem;
+
+    }
+
+    .about-us-socials i {
+        font-size: 2rem;
+    }
+
+    .left {
+        padding: 3rem;
+        width: 100%;
+        row-gap: 20px;
+        align-items: start;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .contact-me-desc {
+        text-align: start;
+    }
+
+    footer {
+        height: fit-content;
+        width: 100%;
+        display: block;
+
+        padding: 0;
+    }
+
+    .footer-social-icons {
+        font-size: 3rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
